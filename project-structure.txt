@@ -1,0 +1,30 @@
+financial-graph-platform/
+├── apps/                           # 应用层
+│   ├── equity-analysis/           # 股权穿透分析
+│   ├── risk-warning/             # 风险预警系统
+│   └── regulatory-audit/         # 监管合规审计
+├── services/                      # 服务层
+│   ├── graph-compute/            # 图计算服务
+│   │   ├── algorithms/           # 图算法实现
+│   │   └── api/                 # 服务接口
+│   ├── risk-model/              # 风险模型服务
+│   │   ├── gnn/                # 图神经网络模型
+│   │   └── stress-test/        # 压力测试框架
+│   └── data-governance/         # 数据治理服务
+│       ├── lineage/            # 数据血缘
+│       └── security/           # 数据安全
+├── engine/                       # 引擎层
+│   ├── compute/                 # 混合计算引擎
+│   │   ├── neo4j/              # Neo4j适配器
+│   │   ├── graphx/             # Spark GraphX组件
+│   │   └── flink/              # Flink流处理
+│   ├── storage/                 # 存储引擎
+│   │   ├── delta/              # Delta Lake存储
+│   │   └── temporal/           # 时序图存储
+│   └── security/               # 安全计算引擎
+│       ├── encryption/         # 同态加密
+│       └── sm4/               # 国密实现
+└── infrastructure/             # 基础设施
+    ├── common/                 # 公共组件
+    ├── config/                # 配置管理
+    └── monitor/              # 监控告警 

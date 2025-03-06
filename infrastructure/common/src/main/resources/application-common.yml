@@ -1,0 +1,24 @@
+# 公共配置
+spring:
+  application:
+    name: financial-graph-platform
+  
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: password
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.bank: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 安全配置
+security:
+  encryption:
+    algorithm: SM4
+    key-size: 128 

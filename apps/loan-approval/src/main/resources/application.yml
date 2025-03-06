@@ -1,0 +1,38 @@
+server:
+  port: 8083
+
+spring:
+  profiles:
+    include: common
+  
+  application:
+    name: loan-approval-service
+  
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: password
+
+graph:
+  compute:
+    spark:
+      master: spark://localhost:7077
+      appName: loan-approval
+      executorMemory: 4g
+    
+    community:
+      algorithm: louvain
+      maxIterations: 10
+      minModularityGain: 0.0001
+
+risk:
+  model:
+    scorecard:
+      fraudThreshold: 600
+      highRiskThreshold: 500
+      manualReviewThreshold: 700
+    
+    features:
+      graphWeight: 0.6
+      traditionalWeight: 0.4 
